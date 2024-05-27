@@ -377,6 +377,8 @@ public:
      */
     std::optional<Blob>
     fetchLedgerObject(ripple::uint256 const& key, std::uint32_t sequence, boost::asio::yield_context yield) const;
+    // std::vector<std::optional<Blob>>
+    // fetchLastTwoLedgerObjects(ripple::uint256 const& key, std::uint32_t sequence, boost::asio::yield_context yield) const;
 
     /**
      * @brief Fetches all ledger objects by their keys.
@@ -406,6 +408,17 @@ public:
      */
     virtual std::optional<Blob>
     doFetchLedgerObject(ripple::uint256 const& key, std::uint32_t sequence, boost::asio::yield_context yield) const = 0;
+
+    //     /**
+    //  * @brief The database-specific implementation for fetching last two ledger objects.
+    //  *
+    //  * @param key The key to fetch for
+    //  * @param sequence The ledger sequence to fetch for
+    //  * @param yield The coroutine context
+    //  * @return  A vector containing two Blobs, representing last two ledger objects
+    //  */
+    // virtual std::vector<std::optional<Blob>>
+    // doFetchLastTwoLedgerObjects(ripple::uint256 const& key, std::uint32_t sequence, boost::asio::yield_context yield) const = 0;
 
     /**
      * @brief The database-specific implementation for fetching ledger objects.

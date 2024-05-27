@@ -566,6 +566,31 @@ public:
 
         return std::nullopt;
     }
+    // std::vector<std::optional<Blob>>
+    // doFetchLastTwoLedgerObjects(ripple::uint256 const& key, std::uint32_t const sequence, boost::asio::yield_context yield)
+    //     const override
+    // {
+    //     LOG(log_.debug()) << "Fetching last two ledger objects for seq " << sequence << ", key = " << ripple::to_string(key);
+    //     if (auto const res = executor_.read(yield, schema_->selectLastTwoObjects, key, sequence); res) {
+    //         auto const& result = res.value();
+    //         if (not result.hasRows()) {
+    //             LOG(log_.error()) << "Could not fetch last two ledger objects - no rows";
+    //             return {};
+    //         }
+    //         std::vector<std::optional<Blob>> objects;
+    //         for (auto [object] : extract<Blob>(result))
+    //             objects.push_back(std::move(object));
+    //         if (objects.size() != 2) {
+    //             LOG(log_.error()) << "Fetched incorrect number of rows for ledger objects. Should be 2 but fetched "
+    //                             << std::to_string(objects.size());
+    //             return {};
+    //         }
+    //         return objects;
+    //     } else {
+    //         LOG(log_.error()) << "Could not fetch last two ledger objects: " << res.error();
+    //     }
+    //     return {};
+    // }
 
     std::optional<TransactionAndMetadata>
     fetchTransaction(ripple::uint256 const& hash, boost::asio::yield_context yield) const override
