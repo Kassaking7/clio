@@ -155,6 +155,13 @@ struct MockBackend : public BackendInterface {
     );
 
     MOCK_METHOD(
+        std::vector<Blob>,
+        doFetchLastTwoLedgerObjects,
+        (ripple::uint256 const&, std::uint32_t const, boost::asio::yield_context),
+        (const, override)
+    );
+
+    MOCK_METHOD(
         std::vector<LedgerObject>,
         fetchLedgerDiff,
         (std::uint32_t const, boost::asio::yield_context),
