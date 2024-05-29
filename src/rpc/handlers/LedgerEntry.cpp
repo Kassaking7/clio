@@ -159,7 +159,7 @@ LedgerEntryHandler::process(LedgerEntryHandler::Input input, Context const& ctx,
     auto const lgrInfo = std::get<ripple::LedgerHeader>(lgrInfoOrStatus);
     std::uint32_t deleted_ledger_index = 0;
     bool ledger_deleted = false;
-    auto ledgerObject = sharedPtrBackend_->fetchLedgerObject(key, lgrInfo.seq, ctx.yield);;
+    std::optional<data::Blob> ledgerObject;
     if (include_deleted){
         auto const lastTwoObjects = sharedPtrBackend_->fetchLastTwoLedgerObjects(key, lgrInfo.seq, ctx.yield);
         if (lastTwoObjects.empty())
@@ -174,6 +174,7 @@ LedgerEntryHandler::process(LedgerEntryHandler::Input input, Context const& ctx,
                 return Error{Status{"entryNotFound"}};
         }
     } else {
+        ledgerObject = sharedPtrBackend_->fetchLedgerObject(key, lgrInfo.seq, ctx.yield);
         if (!ledgerObject || ledgerObject->empty())
             return Error{Status{"entryNotFound"}};
     }
