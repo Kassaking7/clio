@@ -55,7 +55,7 @@
 namespace rpc {
 
 LedgerEntryHandler::Result
-LedgerEntryHandler::process(LedgerEntryHandler::Input input, Context const& ctx) const
+LedgerEntryHandler::process(LedgerEntryHandler::Input input, Context const& ctx, bool include_deleted) const
 {
     ripple::uint256 key;
 
@@ -157,10 +157,26 @@ LedgerEntryHandler::process(LedgerEntryHandler::Input input, Context const& ctx)
         return Error{*status};
 
     auto const lgrInfo = std::get<ripple::LedgerHeader>(lgrInfoOrStatus);
-    auto const ledgerObject = sharedPtrBackend_->fetchLedgerObject(key, lgrInfo.seq, ctx.yield);
-
-    if (!ledgerObject || ledgerObject->empty())
-        return Error{Status{"entryNotFound"}};
+    std::uint32_t deleted_ledger_index = 0;
+    bool ledger_deleted = false;
+    auto ledgerObject = sharedPtrBackend_->fetchLedgerObject(key, lgrInfo.seq, ctx.yield);;
+    if (include_deleted){
+        auto const lastTwoObjects = sharedPtrBackend_->fetchLastTwoLedgerObjects(key, lgrInfo.seq, ctx.yield);
+        if (lastTwoObjects.empty())
+            return Error{Status{"entryNotFound"}};
+        if (lastTwoObjects.size() == 2) {
+            ledgerObject = lastTwoObjects[0].second.empty()? std::make_optional(lastTwoObjects[1].second) : std::make_optional(lastTwoObjects[0].second);
+            deleted_ledger_index = lastTwoObjects[0].second.empty()? lastTwoObjects[0].first : -1;
+            ledger_deleted = true;
+        } else {
+            ledgerObject = std::make_optional(lastTwoObjects[0].second);
+            if (!ledgerObject || ledgerObject->empty())
+                return Error{Status{"entryNotFound"}};
+        }
+    } else {
+        if (!ledgerObject || ledgerObject->empty())
+            return Error{Status{"entryNotFound"}};
+    }
 
     ripple::STLedgerEntry const sle{ripple::SerialIter{ledgerObject->data(), ledgerObject->size()}, key};
 
@@ -171,7 +187,8 @@ LedgerEntryHandler::process(LedgerEntryHandler::Input input, Context const& ctx)
     output.index = ripple::strHex(key);
     output.ledgerIndex = lgrInfo.seq;
     output.ledgerHash = ripple::strHex(lgrInfo.hash);
-
+    if (ledger_deleted)
+        output.deleted_ledger_index = deleted_ledger_index;
     if (input.binary) {
         output.nodeBinary = ripple::strHex(*ledgerObject);
     } else {

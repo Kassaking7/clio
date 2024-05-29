@@ -70,6 +70,7 @@ public:
         std::optional<boost::json::object> node;
         std::optional<std::string> nodeBinary;
         bool validated = true;
+        uint32_t deleted_ledger_index;
     };
 
     /**
@@ -310,10 +311,11 @@ public:
      *
      * @param input The input data for the command
      * @param ctx The context of the request
+     * @param include_deleted Whether to include deleted entries
      * @return The result of the operation
      */
     Result
-    process(Input input, Context const& ctx) const;
+    process(Input input, Context const& ctx, bool include_deleted = false) const;
 
 private:
     // dir_root and owner can not be both empty or filled at the same time
