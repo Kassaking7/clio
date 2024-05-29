@@ -166,7 +166,7 @@ LedgerEntryHandler::process(LedgerEntryHandler::Input input, Context const& ctx,
             return Error{Status{"entryNotFound"}};
         if (lastTwoObjects.size() == 2) {
             ledgerObject = lastTwoObjects[0].second.empty()? std::make_optional(lastTwoObjects[1].second) : std::make_optional(lastTwoObjects[0].second);
-            deleted_ledger_index = lastTwoObjects[0].second.empty()? lastTwoObjects[0].first : -1;
+            deleted_ledger_index = lastTwoObjects[0].second.empty()? lastTwoObjects[0].first : 0;
             ledger_deleted = true;
         } else {
             ledgerObject = std::make_optional(lastTwoObjects[0].second);
