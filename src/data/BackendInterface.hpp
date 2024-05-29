@@ -387,7 +387,7 @@ public:
      * @param yield The coroutine context
      * @return A vector containing two Blobs, representing last two ledger objects
      */
-    std::vector<Blob>
+    std::vector<std::pair<std::uint32_t, Blob>> 
     fetchLastTwoLedgerObjects(ripple::uint256 const& key, std::uint32_t sequence, boost::asio::yield_context yield) const;
 
     /**
@@ -398,7 +398,7 @@ public:
      * @param yield The coroutine context
      * @return  A vector containing two Blobs, representing last two ledger objects
      */
-    virtual std::vector<Blob>
+    virtual std::vector<std::pair<std::uint32_t, Blob>> 
     doFetchLastTwoLedgerObjects(ripple::uint256 const& key, std::uint32_t sequence, boost::asio::yield_context yield) const = 0;
     
     /**

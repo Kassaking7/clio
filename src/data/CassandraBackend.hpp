@@ -567,7 +567,7 @@ public:
         return std::nullopt;
     }
 
-    std::vector<Blob>
+    std::vector<std::pair<std::uint32_t, Blob>> 
     doFetchLastTwoLedgerObjects(ripple::uint256 const& key, std::uint32_t const sequence, boost::asio::yield_context yield)
         const override
     {
@@ -578,14 +578,9 @@ public:
                 LOG(log_.error()) << "Could not fetch last two ledger objects - no rows";
                 return {};
             }
-            std::vector<Blob> objects;
-            for (auto [object] : extract<Blob>(result))
-                objects.push_back(std::move(object));
-            if (objects.size() != 2) {
-                LOG(log_.error()) << "Fetched incorrect number of rows for ledger objects. Should be 2 but fetched "
-                                << std::to_string(objects.size());
-                return {};
-            }
+            std::vector<std::pair<std::uint32_t, Blob>>  objects;
+            for (auto [seq, object] : extract<std::uint32_t, Blob> (result))
+                objects.push_back(std::make_pair(seq, object));
             return objects;
         } else {
             LOG(log_.error()) << "Could not fetch last two ledger objects: " << res.error();

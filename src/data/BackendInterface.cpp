@@ -103,7 +103,7 @@ BackendInterface::fetchLedgerObject(
     return dbObj;
 }
 
-std::vector<Blob>
+std::vector<std::pair<std::uint32_t, Blob>> 
 BackendInterface::fetchLastTwoLedgerObjects(
     ripple::uint256 const& key,
     std::uint32_t const sequence,
