@@ -55,7 +55,7 @@
 namespace rpc {
 
 LedgerEntryHandler::Result
-LedgerEntryHandler::process(LedgerEntryHandler::Input input, Context const& ctx, bool include_deleted) const
+LedgerEntryHandler::process(LedgerEntryHandler::Input input, Context const& ctx) const
 {
     ripple::uint256 key;
 
@@ -157,22 +157,23 @@ LedgerEntryHandler::process(LedgerEntryHandler::Input input, Context const& ctx,
         return Error{*status};
 
     auto const lgrInfo = std::get<ripple::LedgerHeader>(lgrInfoOrStatus);
-    std::uint32_t deleted_ledger_index = 0;
-    bool ledger_deleted = false;
     std::optional<data::Blob> ledgerObject;
-    if (include_deleted){
+    auto output = LedgerEntryHandler::Output{};
+    output.deleted_ledger_index = std::nullopt;
+    if (input.include_deleted.has_value() && input.include_deleted.value() == true){
         auto const lastTwoObjects = sharedPtrBackend_->fetchLastTwoLedgerObjects(key, lgrInfo.seq, ctx.yield);
-        if (lastTwoObjects.empty())
+        if (lastTwoObjects.empty()) {
             return Error{Status{"entryNotFound"}};
-        if (lastTwoObjects.size() == 2) {
-            ledgerObject = lastTwoObjects[0].second.empty()? std::make_optional(lastTwoObjects[1].second) : std::make_optional(lastTwoObjects[0].second);
-            deleted_ledger_index = lastTwoObjects[0].second.empty()? lastTwoObjects[0].first : 0;
-            ledger_deleted = true;
-        } else {
+        }
+        else if (lastTwoObjects.size() == 1) {
             ledgerObject = std::make_optional(lastTwoObjects[0].second);
             if (!ledgerObject || ledgerObject->empty())
                 return Error{Status{"entryNotFound"}};
-        }
+        } 
+        else if (lastTwoObjects.size() == 2) {
+            ledgerObject = lastTwoObjects[0].second.empty()? std::make_optional(lastTwoObjects[1].second) : std::make_optional(lastTwoObjects[0].second);
+            output.deleted_ledger_index = lastTwoObjects[0].second.empty()? lastTwoObjects[0].first : 0;
+        } 
     } else {
         ledgerObject = sharedPtrBackend_->fetchLedgerObject(key, lgrInfo.seq, ctx.yield);
         if (!ledgerObject || ledgerObject->empty())
@@ -184,12 +185,9 @@ LedgerEntryHandler::process(LedgerEntryHandler::Input input, Context const& ctx,
     if (input.expectedType != ripple::ltANY && sle.getType() != input.expectedType)
         return Error{Status{"unexpectedLedgerType"}};
 
-    auto output = LedgerEntryHandler::Output{};
     output.index = ripple::strHex(key);
     output.ledgerIndex = lgrInfo.seq;
     output.ledgerHash = ripple::strHex(lgrInfo.hash);
-    if (ledger_deleted)
-        output.deleted_ledger_index = deleted_ledger_index;
     if (input.binary) {
         output.nodeBinary = ripple::strHex(*ledgerObject);
     } else {
@@ -232,7 +230,7 @@ tag_invoke(boost::json::value_from_tag, boost::json::value& jv, LedgerEntryHandl
         {JS(validated), output.validated},
         {JS(index), output.index},
     };
-
+    object["deleted_ledger_index"] = output.deleted_ledger_index.has_value()? output.deleted_ledger_index.value() : 0;
     if (output.nodeBinary) {
         object[JS(node_binary)] = *(output.nodeBinary);
     } else {
@@ -247,7 +245,7 @@ tag_invoke(boost::json::value_to_tag<LedgerEntryHandler::Input>, boost::json::va
 {
     auto input = LedgerEntryHandler::Input{};
     auto const& jsonObject = jv.as_object();
-
+    std::cout << "jsonObject: " << jsonObject << std::endl;
     if (jsonObject.contains(JS(ledger_hash)))
         input.ledgerHash = boost::json::value_to<std::string>(jv.at(JS(ledger_hash)));
 
@@ -349,7 +347,9 @@ tag_invoke(boost::json::value_to_tag<LedgerEntryHandler::Input>, boost::json::va
     } else if (jsonObject.contains(JS(oracle))) {
         input.oracleNode = parseOracleFromJson(jv.at(JS(oracle)));
     }
-
+    if (jsonObject.contains("include_deleted")) {
+        input.include_deleted = jv.at("include_deleted").as_bool();
+    }
     return input;
 }
 

@@ -70,7 +70,7 @@ public:
         std::optional<boost::json::object> node;
         std::optional<std::string> nodeBinary;
         bool validated = true;
-        uint32_t deleted_ledger_index;
+        std::optional<uint32_t> deleted_ledger_index;
     };
 
     /**
@@ -102,6 +102,7 @@ public:
         std::optional<uint32_t> chainClaimId;
         std::optional<uint32_t> createAccountClaimId;
         std::optional<ripple::uint256> oracleNode;
+        std::optional<bool> include_deleted;
     };
 
     using Result = HandlerReturnType<Output>;
@@ -315,7 +316,7 @@ public:
      * @return The result of the operation
      */
     Result
-    process(Input input, Context const& ctx, bool include_deleted = false) const;
+    process(Input input, Context const& ctx) const;
 
 private:
     // dir_root and owner can not be both empty or filled at the same time
