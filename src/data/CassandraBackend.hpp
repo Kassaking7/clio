@@ -581,6 +581,9 @@ public:
             std::vector<std::pair<std::uint32_t, Blob>> objects;
             for (auto [obj, seq] : extract<Blob, std::uint32_t>(results))
                 objects.push_back({seq, obj});
+            if (objects.size() > 2) {
+                LOG(log_.error()) << "Entries returned exceeded the expected";
+            }
             return objects;
         } else {
             LOG(log_.error()) << "Could not fetch last two ledger objects: " << res.error();

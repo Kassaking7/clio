@@ -174,6 +174,9 @@ LedgerEntryHandler::process(LedgerEntryHandler::Input input, Context const& ctx)
             ledgerObject = lastTwoObjects[0].second.empty()? std::make_optional(lastTwoObjects[1].second) : std::make_optional(lastTwoObjects[0].second);
             output.deleted_ledger_index = lastTwoObjects[0].second.empty()? lastTwoObjects[0].first : 0;
         } 
+        else {
+            return Error{Status{"entryExceedsExpected"}};
+        }
     } else {
         ledgerObject = sharedPtrBackend_->fetchLedgerObject(key, lgrInfo.seq, ctx.yield);
         if (!ledgerObject || ledgerObject->empty())
@@ -230,7 +233,9 @@ tag_invoke(boost::json::value_from_tag, boost::json::value& jv, LedgerEntryHandl
         {JS(validated), output.validated},
         {JS(index), output.index},
     };
-    object["deleted_ledger_index"] = output.deleted_ledger_index.has_value()? output.deleted_ledger_index.value() : 0;
+    if (output.deleted_ledger_index.has_value()) {
+        object["deleted_ledger_index"] = output.deleted_ledger_index.value();
+    }
     if (output.nodeBinary) {
         object[JS(node_binary)] = *(output.nodeBinary);
     } else {
@@ -245,7 +250,6 @@ tag_invoke(boost::json::value_to_tag<LedgerEntryHandler::Input>, boost::json::va
 {
     auto input = LedgerEntryHandler::Input{};
     auto const& jsonObject = jv.as_object();
-    std::cout << "jsonObject: " << jsonObject << std::endl;
     if (jsonObject.contains(JS(ledger_hash)))
         input.ledgerHash = boost::json::value_to<std::string>(jv.at(JS(ledger_hash)));
 
