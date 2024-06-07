@@ -302,6 +302,7 @@ public:
                   }},
              }}},
             {JS(ledger), check::Deprecated{}},
+            {"include_deleted", validation::Type<bool>{}},
         };
 
         return rpcSpec;

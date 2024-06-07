@@ -233,8 +233,8 @@ tag_invoke(boost::json::value_from_tag, boost::json::value& jv, LedgerEntryHandl
         {JS(validated), output.validated},
         {JS(index), output.index},
     };
-    if (output.deleted_ledger_index.has_value()) {
-        object["deleted_ledger_index"] = output.deleted_ledger_index.value();
+    if (output.deleted_ledger_index) {
+        object["deleted_ledger_index"] = *(output.deleted_ledger_index);
     }
     if (output.nodeBinary) {
         object[JS(node_binary)] = *(output.nodeBinary);
