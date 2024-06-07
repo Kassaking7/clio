@@ -171,8 +171,9 @@ LedgerEntryHandler::process(LedgerEntryHandler::Input input, Context const& ctx)
                 return Error{Status{"entryNotFound"}};
         } 
         else if (lastTwoObjects.size() == 2) {
-            ledgerObject = lastTwoObjects[0].second.empty()? std::make_optional(lastTwoObjects[1].second) : std::make_optional(lastTwoObjects[0].second);
-            output.deleted_ledger_index = lastTwoObjects[0].second.empty()? lastTwoObjects[0].first : 0;
+            bool const isDeleted  = lastTwoObjects[0].second.empty();
+            ledgerObject = isDeleted? std::make_optional(lastTwoObjects[1].second) : std::make_optional(lastTwoObjects[0].second);
+            output.deleted_ledger_index = isDeleted? std::optional(lastTwoObjects[0].first) : std::nullopt;
         } 
     } else {
         ledgerObject = sharedPtrBackend_->fetchLedgerObject(key, lgrInfo.seq, ctx.yield);
