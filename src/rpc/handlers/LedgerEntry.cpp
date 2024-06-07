@@ -174,9 +174,6 @@ LedgerEntryHandler::process(LedgerEntryHandler::Input input, Context const& ctx)
             ledgerObject = lastTwoObjects[0].second.empty()? std::make_optional(lastTwoObjects[1].second) : std::make_optional(lastTwoObjects[0].second);
             output.deleted_ledger_index = lastTwoObjects[0].second.empty()? lastTwoObjects[0].first : 0;
         } 
-        else {
-            return Error{Status{"entryExceedsExpected"}};
-        }
     } else {
         ledgerObject = sharedPtrBackend_->fetchLedgerObject(key, lgrInfo.seq, ctx.yield);
         if (!ledgerObject || ledgerObject->empty())
