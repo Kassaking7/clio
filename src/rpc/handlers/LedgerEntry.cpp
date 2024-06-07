@@ -171,6 +171,7 @@ LedgerEntryHandler::process(LedgerEntryHandler::Input input, Context const& ctx)
                 return Error{Status{"entryNotFound"}};
         } 
         else if (lastTwoObjects.size() == 2) {
+            // return the lastest object that is not deleted
             bool const isDeleted  = lastTwoObjects[0].second.empty();
             ledgerObject = isDeleted? std::make_optional(lastTwoObjects[1].second) : std::make_optional(lastTwoObjects[0].second);
             output.deleted_ledger_index = isDeleted? std::optional(lastTwoObjects[0].first) : std::nullopt;
