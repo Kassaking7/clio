@@ -2722,6 +2722,7 @@ TEST_F(RPCLedgerEntryTest, LedgerEntryNotExist)
         .WillOnce(Return(std::optional<Blob>{}));
     EXPECT_CALL(*backend, doFetchLedgerObject(ripple::uint256{INDEX1}, RANGEMAX - 1, _))
         .WillOnce(Return(std::optional<Blob>{}));
+
     runSpawn([&, this](auto yield) {
         auto const handler = AnyHandler{LedgerEntryHandler{backend}};
         auto const req = json::parse(fmt::format(
@@ -2791,7 +2792,7 @@ TEST_F(RPCLedgerEntryTest, BinaryFalseIncludeDeleteFalse)
 
 // Test when an object is updated and include_deleted is set to true
 // Expected Result: return the latest object that is not deleted (latest object in this test)
- TEST_F(RPCLedgerEntryTest, ObjectUpdateIncludeDelete)
+TEST_F(RPCLedgerEntryTest, ObjectUpdateIncludeDelete)
 {
     static auto constexpr OUT = R"({
         "ledger_hash":"4BC50C9B0D8515D3EAAE1E74B29A95804346C491EE1A95BF25E4AAB854A6A652",
@@ -2834,6 +2835,7 @@ TEST_F(RPCLedgerEntryTest, BinaryFalseIncludeDeleteFalse)
         .WillRepeatedly(Return(line1.getSerializer().peekData()));
     EXPECT_CALL(*backend, doFetchLedgerObject(ripple::uint256{INDEX1}, RANGEMAX - 1, _))
         .WillRepeatedly(Return(line2.getSerializer().peekData()));
+  
     runSpawn([&, this](auto yield) {
         auto const handler = AnyHandler{LedgerEntryHandler{backend}};
         auto const req = json::parse(fmt::format(
