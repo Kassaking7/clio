@@ -1,0 +1,47 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(lldb) Launch",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/clio_server",
+            "args":  ["../clio-local-conf.json"],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "env": {
+                "LLDB_SERVER_PORT": "12345"
+            },
+        },
+        {
+            "name": "Clio Server",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/clio_server",
+            "args": [
+                "../clio-local-conf.json"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
+        },
+        {
+            "name": "Clio Tests",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/clio_tests",
+            "args": [
+                "--gtest_filter=RPCLedgerEntryTest*"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
+        }
+    ]
+}

@@ -1,0 +1,497 @@
+2024-05-31 14:05:12.725886 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Default log level = NFO
+2024-05-31 14:05:12.727456 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Clio version: clio-20240527134141-project-DEFI-129-branch-87ac1a6
+2024-05-31 14:05:12.727477 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Number of io threads = 2
+2024-05-31 14:05:12.787837 (util/log/Logger.hpp:227) [0x00000001ffa60c00] Subscriptions:NFO Starting subscription manager with 1 workers
+2024-05-31 14:05:12.797935 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Added etl source - {validated range: N/A, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-05-31 14:05:12.798006 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Starting reporting etl
+2024-05-31 14:05:12.799302 (util/log/Logger.hpp:236) [0x0000000174aa3000] ETL:WRN start sequence specified but db is already populated
+2024-05-31 14:05:12.799327 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Database already populated. Picking up from the tip of history
+2024-05-31 14:05:12.799341 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache with cursor from num_diffs=32
+2024-05-31 14:05:12.804283 (util/log/Logger.hpp:227) [0x00000001ffa60c00] GrpcSource[127.0.0.1:6006]:NFO Received a message on ledger subscription stream. Message : {"result":{"fee_base":10,"ledger_hash":"B79C4AA0A8B360ED1661FDB108A489D2A284EF478B55128EEC2953A13D291FA0","ledger_index":331,"ledger_time":769895120,"reserve_base":10000000,"reserve_inc":2000000,"validated_ledgers":"2-331"},"status":"success","type":"response"}
+2024-05-31 14:05:12.878556 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache. Num cursors = 11
+2024-05-31 14:05:12.878648 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 1966CE0F6F6CB6FA73DD8CB9D9E3A0C49FB8F99FF7F512AB64BA6E64E4378450
+2024-05-31 14:05:12.878641 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 0000000000000000000000000000000000000000000000000000000000000000
+2024-05-31 14:05:12.878678 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 2B6AC232AA4C4BE41BF49D2459FA4A0347E1B543A4C92FCEE0821C0201E2E9A8
+2024-05-31 14:05:12.878690 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 775C4E7538E019850EF3204EBD25A3A0B16D1DAE0D36699D61E0D57B2C9C1859
+2024-05-31 14:05:12.878723 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Database is populated. Starting monitor loop. sequence = 332
+2024-05-31 14:05:12.878732 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 7937CA4ED652F1BE4B60AD313F06A2A31495D3182A9BD0D9FD895D321854348F
+2024-05-31 14:05:12.878735 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 7E59B397F8818F23451C2712478646DCB0E2080BBBB8AE7E4361BA3304772AA9
+2024-05-31 14:05:12.878745 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 850ACC4F9EDB1D9536702A20EADC2190D1DC8F81EAEB35ACA26169B735391CB6
+2024-05-31 14:05:12.878753 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: AE17C4C2CF5AE91110BD008484C03B2D770A82EA7028A02326DE7095C13D47AE
+2024-05-31 14:05:12.878767 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: B6D27E335B812FE76F10ECC49682F850D21863D1FFFFFFFFFFFFFFFFFFFFFFFF
+2024-05-31 14:05:12.878757 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B
+2024-05-31 14:05:12.878778 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: CE68126A713E7C9929E5499726EDE6EF25DE7CE420BB98A3AEE5EB44EDBEF1E6
+2024-05-31 14:05:12.880505 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 10
+2024-05-31 14:05:12.882976 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 9
+2024-05-31 14:05:12.884722 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 8
+2024-05-31 14:05:12.885656 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 7
+2024-05-31 14:05:12.886619 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 6
+2024-05-31 14:05:12.887962 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 5
+2024-05-31 14:05:12.890363 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 4
+2024-05-31 14:05:12.891527 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 3
+2024-05-31 14:05:12.896923 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 2
+2024-05-31 14:05:12.898100 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 1
+2024-05-31 14:05:12.898261 (util/log/Logger.hpp:227) [0x000000017498b000] ETL:NFO Finished loading cache. Cache size = 13. Took 0 seconds
+2024-05-31 14:06:56.323562 (util/log/Logger.hpp:218) [0x00000001751bf000] Performance:DBG [0] http session created
+2024-05-31 14:06:56.324276 (util/log/Logger.hpp:227) [0x00000001751bf000] WebServer:NFO [0] Received request from ip = 127.0.0.1 - posting to WorkQueue
+2024-05-31 14:06:56.324415 (util/log/Logger.hpp:218) [0x00000001751bf000] Performance:DBG [0] Adding to work queue
+2024-05-31 14:06:56.324579 (util/log/Logger.hpp:218) [0x0000000174b2f000] Performance:DBG [[0] 1] new Context created
+2024-05-31 14:06:56.324720 (util/log/Logger.hpp:218) [0x0000000174b2f000] Performance:DBG [[0] 1]  start executing rpc `tx`
+2024-05-31 14:06:56.329286 (util/log/Logger.hpp:218) [0x0000000174bbb000] Performance:DBG [[0] 1]  finish executing rpc `tx`
+2024-05-31 14:06:56.330414 (util/log/Logger.hpp:218) [0x00000001ffa60c00] Performance:DBG [0] http session closed
+2024-05-31 14:07:28.297620 (util/log/Logger.hpp:218) [0x00000001ffa60c00] Performance:DBG [2] http session created
+2024-05-31 14:07:28.298299 (util/log/Logger.hpp:227) [0x00000001ffa60c00] WebServer:NFO [2] Received request from ip = 127.0.0.1 - posting to WorkQueue
+2024-05-31 14:07:28.298447 (util/log/Logger.hpp:218) [0x00000001ffa60c00] Performance:DBG [2] Adding to work queue
+2024-05-31 14:07:28.298604 (util/log/Logger.hpp:218) [0x0000000174c47000] Performance:DBG [[2] 3] new Context created
+2024-05-31 14:07:28.298712 (util/log/Logger.hpp:218) [0x0000000174c47000] Performance:DBG [[2] 3]  start executing rpc `tx`
+2024-05-31 14:07:28.301577 (util/log/Logger.hpp:218) [0x0000000174cd3000] Performance:DBG [[2] 3]  finish executing rpc `tx`
+2024-05-31 14:07:28.302285 (util/log/Logger.hpp:218) [0x00000001751bf000] Performance:DBG [2] http session closed
+2024-05-31 14:14:48.330574 (util/log/Logger.hpp:218) [0x00000001751bf000] Performance:DBG [4] http session created
+2024-05-31 14:14:48.331253 (util/log/Logger.hpp:227) [0x00000001751bf000] WebServer:NFO [4] Received request from ip = 127.0.0.1 - posting to WorkQueue
+2024-05-31 14:14:48.331386 (util/log/Logger.hpp:218) [0x00000001751bf000] Performance:DBG [4] Adding to work queue
+2024-05-31 14:14:48.331562 (util/log/Logger.hpp:218) [0x0000000174d5f000] Performance:DBG [[4] 5] new Context created
+2024-05-31 14:14:48.331672 (util/log/Logger.hpp:218) [0x0000000174d5f000] Performance:DBG [[4] 5]  start executing rpc `tx`
+2024-05-31 14:14:48.334206 (util/log/Logger.hpp:218) [0x0000000174deb000] Performance:DBG [[4] 5]  finish executing rpc `tx`
+2024-05-31 14:14:48.334836 (util/log/Logger.hpp:218) [0x00000001ffa60c00] Performance:DBG [4] http session closed
+2024-05-31 14:43:23.159988 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Default log level = NFO
+2024-05-31 14:43:23.161770 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Clio version: clio-20240527134141-project-DEFI-129-branch-87ac1a6
+2024-05-31 14:43:23.161808 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Number of io threads = 2
+2024-05-31 14:43:23.223427 (util/log/Logger.hpp:227) [0x00000001ffa60c00] Subscriptions:NFO Starting subscription manager with 1 workers
+2024-05-31 14:43:23.236507 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Added etl source - {validated range: N/A, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-05-31 14:43:23.236608 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Starting reporting etl
+2024-05-31 14:43:23.237922 (util/log/Logger.hpp:236) [0x0000000174aa3000] ETL:WRN start sequence specified but db is already populated
+2024-05-31 14:43:23.237941 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Database already populated. Picking up from the tip of history
+2024-05-31 14:43:23.237950 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache with cursor from num_diffs=32
+2024-05-31 14:43:23.243136 (util/log/Logger.hpp:227) [0x00000001751bf000] GrpcSource[127.0.0.1:6006]:NFO Received a message on ledger subscription stream. Message : {"result":{"fee_base":10,"ledger_hash":"B79C4AA0A8B360ED1661FDB108A489D2A284EF478B55128EEC2953A13D291FA0","ledger_index":331,"ledger_time":769895120,"reserve_base":10000000,"reserve_inc":2000000,"validated_ledgers":"2-331"},"status":"success","type":"response"}
+2024-05-31 14:43:23.317551 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache. Num cursors = 11
+2024-05-31 14:43:23.317639 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 0000000000000000000000000000000000000000000000000000000000000000
+2024-05-31 14:43:23.317658 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 1966CE0F6F6CB6FA73DD8CB9D9E3A0C49FB8F99FF7F512AB64BA6E64E4378450
+2024-05-31 14:43:23.317663 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 2B6AC232AA4C4BE41BF49D2459FA4A0347E1B543A4C92FCEE0821C0201E2E9A8
+2024-05-31 14:43:23.317689 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 775C4E7538E019850EF3204EBD25A3A0B16D1DAE0D36699D61E0D57B2C9C1859
+2024-05-31 14:43:23.317714 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Database is populated. Starting monitor loop. sequence = 332
+2024-05-31 14:43:23.317715 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 7E59B397F8818F23451C2712478646DCB0E2080BBBB8AE7E4361BA3304772AA9
+2024-05-31 14:43:23.317708 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 7937CA4ED652F1BE4B60AD313F06A2A31495D3182A9BD0D9FD895D321854348F
+2024-05-31 14:43:23.317749 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 850ACC4F9EDB1D9536702A20EADC2190D1DC8F81EAEB35ACA26169B735391CB6
+2024-05-31 14:43:23.317755 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: AE17C4C2CF5AE91110BD008484C03B2D770A82EA7028A02326DE7095C13D47AE
+2024-05-31 14:43:23.317759 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B
+2024-05-31 14:43:23.317764 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: B6D27E335B812FE76F10ECC49682F850D21863D1FFFFFFFFFFFFFFFFFFFFFFFF
+2024-05-31 14:43:23.317769 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: CE68126A713E7C9929E5499726EDE6EF25DE7CE420BB98A3AEE5EB44EDBEF1E6
+2024-05-31 14:43:23.319269 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 10
+2024-05-31 14:43:23.321774 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 9
+2024-05-31 14:43:23.323030 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 8
+2024-05-31 14:43:23.324956 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 7
+2024-05-31 14:43:23.325487 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 6
+2024-05-31 14:43:23.326755 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 5
+2024-05-31 14:43:23.329911 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 4
+2024-05-31 14:43:23.330512 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 3
+2024-05-31 14:43:23.335481 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 2
+2024-05-31 14:43:23.335646 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 1
+2024-05-31 14:43:23.337484 (util/log/Logger.hpp:227) [0x000000017498b000] ETL:NFO Finished loading cache. Cache size = 13. Took 0 seconds
+2024-05-31 14:44:26.833125 (util/log/Logger.hpp:218) [0x00000001751bf000] Performance:DBG [0] http session created
+2024-05-31 14:44:26.833788 (util/log/Logger.hpp:227) [0x00000001751bf000] WebServer:NFO [0] Received request from ip = 127.0.0.1 - posting to WorkQueue
+2024-05-31 14:44:26.833925 (util/log/Logger.hpp:218) [0x00000001751bf000] Performance:DBG [0] Adding to work queue
+2024-05-31 14:44:26.834077 (util/log/Logger.hpp:218) [0x0000000174b2f000] Performance:DBG [[0] 1] new Context created
+2024-05-31 14:44:26.834222 (util/log/Logger.hpp:218) [0x0000000174b2f000] Performance:DBG [[0] 1]  start executing rpc `tx`
+2024-05-31 14:44:26.837860 (util/log/Logger.hpp:218) [0x0000000174bbb000] Performance:DBG [[0] 1]  finish executing rpc `tx`
+2024-05-31 14:44:26.838625 (util/log/Logger.hpp:218) [0x00000001ffa60c00] Performance:DBG [0] http session closed
+2024-05-31 14:46:20.802191 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Default log level = NFO
+2024-05-31 14:46:20.803563 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Clio version: clio-20240527134141-project-DEFI-129-branch-87ac1a6
+2024-05-31 14:46:20.803594 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Number of io threads = 2
+2024-05-31 14:46:20.864852 (util/log/Logger.hpp:227) [0x00000001ffa60c00] Subscriptions:NFO Starting subscription manager with 1 workers
+2024-05-31 14:46:20.877526 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Added etl source - {validated range: N/A, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-05-31 14:46:20.877619 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Starting reporting etl
+2024-05-31 14:46:20.878926 (util/log/Logger.hpp:236) [0x0000000174aa3000] ETL:WRN start sequence specified but db is already populated
+2024-05-31 14:46:20.878953 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Database already populated. Picking up from the tip of history
+2024-05-31 14:46:20.878964 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache with cursor from num_diffs=32
+2024-05-31 14:46:20.884235 (util/log/Logger.hpp:227) [0x00000001ffa60c00] GrpcSource[127.0.0.1:6006]:NFO Received a message on ledger subscription stream. Message : {"result":{"fee_base":10,"ledger_hash":"B79C4AA0A8B360ED1661FDB108A489D2A284EF478B55128EEC2953A13D291FA0","ledger_index":331,"ledger_time":769895120,"reserve_base":10000000,"reserve_inc":2000000,"validated_ledgers":"2-331"},"status":"success","type":"response"}
+2024-05-31 14:46:20.958079 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache. Num cursors = 11
+2024-05-31 14:46:20.958167 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 1966CE0F6F6CB6FA73DD8CB9D9E3A0C49FB8F99FF7F512AB64BA6E64E4378450
+2024-05-31 14:46:20.958158 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 0000000000000000000000000000000000000000000000000000000000000000
+2024-05-31 14:46:20.958198 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 2B6AC232AA4C4BE41BF49D2459FA4A0347E1B543A4C92FCEE0821C0201E2E9A8
+2024-05-31 14:46:20.958204 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 775C4E7538E019850EF3204EBD25A3A0B16D1DAE0D36699D61E0D57B2C9C1859
+2024-05-31 14:46:20.958212 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 7937CA4ED652F1BE4B60AD313F06A2A31495D3182A9BD0D9FD895D321854348F
+2024-05-31 14:46:20.958245 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 7E59B397F8818F23451C2712478646DCB0E2080BBBB8AE7E4361BA3304772AA9
+2024-05-31 14:46:20.958258 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 850ACC4F9EDB1D9536702A20EADC2190D1DC8F81EAEB35ACA26169B735391CB6
+2024-05-31 14:46:20.958233 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Database is populated. Starting monitor loop. sequence = 332
+2024-05-31 14:46:20.958658 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B
+2024-05-31 14:46:20.958649 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: AE17C4C2CF5AE91110BD008484C03B2D770A82EA7028A02326DE7095C13D47AE
+2024-05-31 14:46:20.958674 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: B6D27E335B812FE76F10ECC49682F850D21863D1FFFFFFFFFFFFFFFFFFFFFFFF
+2024-05-31 14:46:20.958698 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: CE68126A713E7C9929E5499726EDE6EF25DE7CE420BB98A3AEE5EB44EDBEF1E6
+2024-05-31 14:46:20.960369 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 10
+2024-05-31 14:46:20.962932 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 9
+2024-05-31 14:46:20.964668 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 8
+2024-05-31 14:46:20.966781 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 7
+2024-05-31 14:46:20.966860 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 6
+2024-05-31 14:46:20.967875 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 5
+2024-05-31 14:46:20.970462 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 4
+2024-05-31 14:46:20.971740 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 3
+2024-05-31 14:46:20.975652 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 2
+2024-05-31 14:46:20.977505 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 1
+2024-05-31 14:46:20.978751 (util/log/Logger.hpp:227) [0x000000017498b000] ETL:NFO Finished loading cache. Cache size = 13. Took 0 seconds
+2024-05-31 14:46:29.320307 (util/log/Logger.hpp:218) [0x00000001ffa60c00] Performance:DBG [0] http session created
+2024-05-31 14:46:29.320905 (util/log/Logger.hpp:227) [0x00000001ffa60c00] WebServer:NFO [0] Received request from ip = 127.0.0.1 - posting to WorkQueue
+2024-05-31 14:46:29.321018 (util/log/Logger.hpp:218) [0x00000001ffa60c00] Performance:DBG [0] Adding to work queue
+2024-05-31 14:46:29.321177 (util/log/Logger.hpp:218) [0x0000000174b2f000] Performance:DBG [[0] 1] new Context created
+2024-05-31 14:46:29.321360 (util/log/Logger.hpp:218) [0x0000000174b2f000] Performance:DBG [[0] 1]  start executing rpc `tx`
+2024-05-31 14:46:29.324624 (util/log/Logger.hpp:218) [0x0000000174bbb000] Performance:DBG [[0] 1]  finish executing rpc `tx`
+2024-05-31 14:46:29.325453 (util/log/Logger.hpp:218) [0x00000001751bf000] Performance:DBG [0] http session closed
+2024-05-31 14:46:56.087072 (util/log/Logger.hpp:218) [0x00000001ffa60c00] Performance:DBG [2] http session created
+2024-05-31 14:46:56.087480 (util/log/Logger.hpp:227) [0x00000001ffa60c00] WebServer:NFO [2] Received request from ip = 127.0.0.1 - posting to WorkQueue
+2024-05-31 14:46:56.087604 (util/log/Logger.hpp:218) [0x00000001ffa60c00] Performance:DBG [2] Adding to work queue
+2024-05-31 14:46:56.087797 (util/log/Logger.hpp:218) [0x0000000174c47000] Performance:DBG [[2] 3] new Context created
+2024-05-31 14:48:49.427725 (util/log/Logger.hpp:218) [0x0000000174c47000] Performance:DBG [[2] 3]  start executing rpc `tx`
+2024-05-31 14:49:00.153024 (util/log/Logger.hpp:245) [0x0000000174cd3000] RPC:ERR Database timeout
+2024-05-31 14:49:00.153204 (util/log/Logger.hpp:245) [0x0000000174cd3000] RPC:ERR [[2] 3] Request processing duration = 124065 milliseconds. request = {"transaction":"124BA7BA1F18CEF0EF1CC09BE2EDAAEC615E9DF993E2E8EAC15996346EB4FB5F"}
+2024-05-31 14:49:00.153265 (util/log/Logger.hpp:218) [0x0000000174cd3000] Performance:DBG [[2] 3] Encountered error: {"result":{"error":"tooBusy","error_code":9,"error_message":"The server is too busy to help you now.","status":"error","type":"response","request":{"method":"tx","params":[{"transaction":"124BA7BA1F18CEF0EF1CC09BE2EDAAEC615E9DF993E2E8EAC15996346EB4FB5F"}]}}}
+2024-05-31 14:49:00.153438 (util/log/Logger.hpp:227) [0x00000001ffa60c00] Performance:NFO [2] : write: The socket was closed due to a timeout
+2024-05-31 14:49:00.153506 (util/log/Logger.hpp:218) [0x00000001ffa60c00] Performance:DBG [2] http session closed
+2024-06-04 15:06:20.431859 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Default log level = NFO
+2024-06-04 15:06:20.433674 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Clio version: clio-20240527134141-project-DEFI-129-branch-87ac1a6
+2024-06-04 15:06:20.433712 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Number of io threads = 2
+2024-06-04 15:06:20.496437 (util/log/Logger.hpp:227) [0x00000001ffa60c00] Subscriptions:NFO Starting subscription manager with 1 workers
+2024-06-04 15:06:20.509705 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Added etl source - {validated range: N/A, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 15:06:20.509795 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Starting reporting etl
+2024-06-04 15:06:20.511105 (util/log/Logger.hpp:236) [0x0000000174aa3000] ETL:WRN start sequence specified but db is already populated
+2024-06-04 15:06:20.511121 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Database already populated. Picking up from the tip of history
+2024-06-04 15:06:20.511135 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache with cursor from num_diffs=32
+2024-06-04 15:06:20.516334 (util/log/Logger.hpp:227) [0x00000001751bf000] GrpcSource[127.0.0.1:6006]:NFO Received a message on ledger subscription stream. Message : {"result":{"fee_base":10,"ledger_hash":"9C94AE70C7464E908B9230E4CA8D5F51FDDD9F2DE8D3CF379E76997A0FD00175","ledger_index":938,"ledger_time":770837270,"reserve_base":10000000,"reserve_inc":2000000,"validated_ledgers":"2-938"},"status":"success","type":"response"}
+2024-06-04 15:06:20.591039 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache. Num cursors = 6
+2024-06-04 15:06:20.591142 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 0000000000000000000000000000000000000000000000000000000000000000
+2024-06-04 15:06:20.591154 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 15D85ED6AF6E66CEB3E5D27ECD0497AE7A01947C9F77F4397A29C1302D036B64
+2024-06-04 15:06:20.591173 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 2B6AC232AA4C4BE41BF49D2459FA4A0347E1B543A4C92FCEE0821C0201E2E9A8
+2024-06-04 15:06:20.591200 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 5638D962A8BE660C7DCF638E10B68314A77C6E5F26088E5240BE0CBA0BC23DDB
+2024-06-04 15:06:20.591214 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: B70EF074BB52A5885F06484291B920AE5419294DFFFFFFFFFFFFFFFFFFFFFFFF
+2024-06-04 15:06:20.591211 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B
+2024-06-04 15:06:20.591224 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Database is populated. Starting monitor loop. sequence = 939
+2024-06-04 15:06:20.595067 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 5
+2024-06-04 15:06:20.598930 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 4
+2024-06-04 15:06:20.610357 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 3
+2024-06-04 15:06:20.612653 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 2
+2024-06-04 15:06:20.615109 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 1
+2024-06-04 15:06:20.616422 (util/log/Logger.hpp:227) [0x000000017498b000] ETL:NFO Finished loading cache. Cache size = 18. Took 0 seconds
+2024-06-04 15:07:24.285269 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Default log level = NFO
+2024-06-04 15:07:24.287087 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Clio version: clio-20240527134141-project-DEFI-129-branch-87ac1a6
+2024-06-04 15:07:24.287110 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Number of io threads = 2
+2024-06-04 15:07:24.350817 (util/log/Logger.hpp:227) [0x00000001ffa60c00] Subscriptions:NFO Starting subscription manager with 1 workers
+2024-06-04 15:07:24.360836 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Added etl source - {validated range: N/A, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 15:07:24.360909 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Starting reporting etl
+2024-06-04 15:07:24.362200 (util/log/Logger.hpp:236) [0x0000000174aa3000] ETL:WRN start sequence specified but db is already populated
+2024-06-04 15:07:24.362224 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Database already populated. Picking up from the tip of history
+2024-06-04 15:07:24.362233 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache with cursor from num_diffs=32
+2024-06-04 15:07:24.367433 (util/log/Logger.hpp:227) [0x00000001751bf000] GrpcSource[127.0.0.1:6006]:NFO Received a message on ledger subscription stream. Message : {"result":{"fee_base":10,"ledger_hash":"9C94AE70C7464E908B9230E4CA8D5F51FDDD9F2DE8D3CF379E76997A0FD00175","ledger_index":938,"ledger_time":770837270,"reserve_base":10000000,"reserve_inc":2000000,"validated_ledgers":"2-938"},"status":"success","type":"response"}
+2024-06-04 15:07:24.441958 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache. Num cursors = 6
+2024-06-04 15:07:24.442038 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 0000000000000000000000000000000000000000000000000000000000000000
+2024-06-04 15:07:24.442120 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 2B6AC232AA4C4BE41BF49D2459FA4A0347E1B543A4C92FCEE0821C0201E2E9A8
+2024-06-04 15:07:24.442084 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 15D85ED6AF6E66CEB3E5D27ECD0497AE7A01947C9F77F4397A29C1302D036B64
+2024-06-04 15:07:24.442169 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 5638D962A8BE660C7DCF638E10B68314A77C6E5F26088E5240BE0CBA0BC23DDB
+2024-06-04 15:07:24.442177 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B
+2024-06-04 15:07:24.442138 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Database is populated. Starting monitor loop. sequence = 939
+2024-06-04 15:07:24.442235 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: B70EF074BB52A5885F06484291B920AE5419294DFFFFFFFFFFFFFFFFFFFFFFFF
+2024-06-04 15:07:24.446146 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 5
+2024-06-04 15:07:24.449826 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 4
+2024-06-04 15:07:24.461369 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 3
+2024-06-04 15:07:24.463737 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 2
+2024-06-04 15:07:24.466194 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 1
+2024-06-04 15:07:24.467413 (util/log/Logger.hpp:227) [0x0000000174a17000] ETL:NFO Finished loading cache. Cache size = 18. Took 0 seconds
+2024-06-04 15:09:44.162846 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Default log level = NFO
+2024-06-04 15:09:44.164741 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Clio version: clio-20240527134141-project-DEFI-129-branch-87ac1a6
+2024-06-04 15:09:44.164762 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Number of io threads = 2
+2024-06-04 15:09:44.225740 (util/log/Logger.hpp:227) [0x00000001ffa60c00] Subscriptions:NFO Starting subscription manager with 1 workers
+2024-06-04 15:09:44.235760 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Added etl source - {validated range: N/A, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 15:09:44.235835 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Starting reporting etl
+2024-06-04 15:09:44.237131 (util/log/Logger.hpp:236) [0x0000000174aa3000] ETL:WRN start sequence specified but db is already populated
+2024-06-04 15:09:44.237155 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Database already populated. Picking up from the tip of history
+2024-06-04 15:09:44.237165 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache with cursor from num_diffs=32
+2024-06-04 15:09:44.241939 (util/log/Logger.hpp:227) [0x00000001ffa60c00] GrpcSource[127.0.0.1:6006]:NFO Received a message on ledger subscription stream. Message : {"result":{"fee_base":10,"ledger_hash":"9C94AE70C7464E908B9230E4CA8D5F51FDDD9F2DE8D3CF379E76997A0FD00175","ledger_index":938,"ledger_time":770837270,"reserve_base":10000000,"reserve_inc":2000000,"validated_ledgers":"2-938"},"status":"success","type":"response"}
+2024-06-04 15:09:44.316960 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache. Num cursors = 6
+2024-06-04 15:09:44.317038 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 0000000000000000000000000000000000000000000000000000000000000000
+2024-06-04 15:09:44.317066 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 15D85ED6AF6E66CEB3E5D27ECD0497AE7A01947C9F77F4397A29C1302D036B64
+2024-06-04 15:09:44.317077 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 2B6AC232AA4C4BE41BF49D2459FA4A0347E1B543A4C92FCEE0821C0201E2E9A8
+2024-06-04 15:09:44.317086 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 5638D962A8BE660C7DCF638E10B68314A77C6E5F26088E5240BE0CBA0BC23DDB
+2024-06-04 15:09:44.317120 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Database is populated. Starting monitor loop. sequence = 939
+2024-06-04 15:09:44.317146 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: B70EF074BB52A5885F06484291B920AE5419294DFFFFFFFFFFFFFFFFFFFFFFFF
+2024-06-04 15:09:44.317130 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B
+2024-06-04 15:09:44.321035 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 5
+2024-06-04 15:09:44.324893 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 4
+2024-06-04 15:09:44.336421 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 3
+2024-06-04 15:09:44.338752 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 2
+2024-06-04 15:09:44.341228 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 1
+2024-06-04 15:09:44.342424 (util/log/Logger.hpp:227) [0x000000017498b000] ETL:NFO Finished loading cache. Cache size = 18. Took 0 seconds
+2024-06-04 15:42:06.005898 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Default log level = NFO
+2024-06-04 15:42:06.007790 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Clio version: clio-20240527134141-project-DEFI-129-branch-87ac1a6
+2024-06-04 15:42:06.007830 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Number of io threads = 2
+2024-06-04 15:42:06.071393 (util/log/Logger.hpp:227) [0x00000001ffa60c00] Subscriptions:NFO Starting subscription manager with 1 workers
+2024-06-04 15:42:06.083837 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Added etl source - {validated range: N/A, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 15:42:06.083936 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Starting reporting etl
+2024-06-04 15:42:06.085265 (util/log/Logger.hpp:236) [0x0000000174aa3000] ETL:WRN start sequence specified but db is already populated
+2024-06-04 15:42:06.085291 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Database already populated. Picking up from the tip of history
+2024-06-04 15:42:06.085301 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache with cursor from num_diffs=32
+2024-06-04 15:42:06.090172 (util/log/Logger.hpp:227) [0x00000001ffa60c00] GrpcSource[127.0.0.1:6006]:NFO Received a message on ledger subscription stream. Message : {"result":{"fee_base":10,"ledger_hash":"9C94AE70C7464E908B9230E4CA8D5F51FDDD9F2DE8D3CF379E76997A0FD00175","ledger_index":938,"ledger_time":770837270,"reserve_base":10000000,"reserve_inc":2000000,"validated_ledgers":"2-938"},"status":"success","type":"response"}
+2024-06-04 15:42:06.165130 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache. Num cursors = 6
+2024-06-04 15:42:06.165225 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 15D85ED6AF6E66CEB3E5D27ECD0497AE7A01947C9F77F4397A29C1302D036B64
+2024-06-04 15:42:06.165220 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 0000000000000000000000000000000000000000000000000000000000000000
+2024-06-04 15:42:06.165278 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 5638D962A8BE660C7DCF638E10B68314A77C6E5F26088E5240BE0CBA0BC23DDB
+2024-06-04 15:42:06.165273 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 2B6AC232AA4C4BE41BF49D2459FA4A0347E1B543A4C92FCEE0821C0201E2E9A8
+2024-06-04 15:42:06.165291 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B
+2024-06-04 15:42:06.165303 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: B70EF074BB52A5885F06484291B920AE5419294DFFFFFFFFFFFFFFFFFFFFFFFF
+2024-06-04 15:42:06.165314 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Database is populated. Starting monitor loop. sequence = 939
+2024-06-04 15:42:06.169434 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 5
+2024-06-04 15:42:06.173014 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 4
+2024-06-04 15:42:06.184435 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 3
+2024-06-04 15:42:06.187903 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 2
+2024-06-04 15:42:06.189263 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 1
+2024-06-04 15:42:06.190450 (util/log/Logger.hpp:227) [0x000000017498b000] ETL:NFO Finished loading cache. Cache size = 18. Took 0 seconds
+2024-06-04 15:47:03.427524 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Default log level = NFO
+2024-06-04 15:47:03.429135 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Clio version: clio-20240527134141-project-DEFI-129-branch-87ac1a6
+2024-06-04 15:47:03.429156 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Number of io threads = 2
+2024-06-04 15:47:03.490318 (util/log/Logger.hpp:227) [0x00000001ffa60c00] Subscriptions:NFO Starting subscription manager with 1 workers
+2024-06-04 15:47:03.500011 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Added etl source - {validated range: N/A, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 15:47:03.500085 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Starting reporting etl
+2024-06-04 15:47:03.501404 (util/log/Logger.hpp:236) [0x0000000174aa3000] ETL:WRN start sequence specified but db is already populated
+2024-06-04 15:47:03.501440 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Database already populated. Picking up from the tip of history
+2024-06-04 15:47:03.501450 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache with cursor from num_diffs=32
+2024-06-04 15:47:03.506176 (util/log/Logger.hpp:227) [0x00000001ffa60c00] GrpcSource[127.0.0.1:6006]:NFO Received a message on ledger subscription stream. Message : {"result":{"fee_base":10,"ledger_hash":"9C94AE70C7464E908B9230E4CA8D5F51FDDD9F2DE8D3CF379E76997A0FD00175","ledger_index":938,"ledger_time":770837270,"reserve_base":10000000,"reserve_inc":2000000,"validated_ledgers":"2-938"},"status":"success","type":"response"}
+2024-06-04 15:47:03.588091 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache. Num cursors = 6
+2024-06-04 15:47:03.588173 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 15D85ED6AF6E66CEB3E5D27ECD0497AE7A01947C9F77F4397A29C1302D036B64
+2024-06-04 15:47:03.588165 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 0000000000000000000000000000000000000000000000000000000000000000
+2024-06-04 15:47:03.588217 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 2B6AC232AA4C4BE41BF49D2459FA4A0347E1B543A4C92FCEE0821C0201E2E9A8
+2024-06-04 15:47:03.588229 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B
+2024-06-04 15:47:03.588228 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 5638D962A8BE660C7DCF638E10B68314A77C6E5F26088E5240BE0CBA0BC23DDB
+2024-06-04 15:47:03.588247 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: B70EF074BB52A5885F06484291B920AE5419294DFFFFFFFFFFFFFFFFFFFFFFFF
+2024-06-04 15:47:03.588243 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Database is populated. Starting monitor loop. sequence = 939
+2024-06-04 15:47:03.592296 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 5
+2024-06-04 15:47:03.595892 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 4
+2024-06-04 15:47:03.607512 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 3
+2024-06-04 15:47:03.609843 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 2
+2024-06-04 15:47:03.612231 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 1
+2024-06-04 15:47:03.613523 (util/log/Logger.hpp:227) [0x000000017498b000] ETL:NFO Finished loading cache. Cache size = 18. Took 0 seconds
+2024-06-04 15:58:47.203700 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Default log level = NFO
+2024-06-04 15:58:47.206172 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Clio version: clio-20240527134141-project-DEFI-129-branch-87ac1a6
+2024-06-04 15:58:47.206195 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Number of io threads = 2
+2024-06-04 15:58:47.269298 (util/log/Logger.hpp:227) [0x00000001ffa60c00] Subscriptions:NFO Starting subscription manager with 1 workers
+2024-06-04 15:58:47.279031 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Added etl source - {validated range: N/A, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 15:58:47.279095 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Starting reporting etl
+2024-06-04 15:58:47.280395 (util/log/Logger.hpp:236) [0x0000000174aa3000] ETL:WRN start sequence specified but db is already populated
+2024-06-04 15:58:47.280423 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Database already populated. Picking up from the tip of history
+2024-06-04 15:58:47.280434 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache with cursor from num_diffs=32
+2024-06-04 15:58:47.285360 (util/log/Logger.hpp:227) [0x00000001ffa60c00] GrpcSource[127.0.0.1:6006]:NFO Received a message on ledger subscription stream. Message : {"result":{"fee_base":10,"ledger_hash":"9C94AE70C7464E908B9230E4CA8D5F51FDDD9F2DE8D3CF379E76997A0FD00175","ledger_index":938,"ledger_time":770837270,"reserve_base":10000000,"reserve_inc":2000000,"validated_ledgers":"2-938"},"status":"success","type":"response"}
+2024-06-04 15:58:47.360222 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache. Num cursors = 6
+2024-06-04 15:58:47.360273 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 0000000000000000000000000000000000000000000000000000000000000000
+2024-06-04 15:58:47.360285 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 15D85ED6AF6E66CEB3E5D27ECD0497AE7A01947C9F77F4397A29C1302D036B64
+2024-06-04 15:58:47.360313 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 2B6AC232AA4C4BE41BF49D2459FA4A0347E1B543A4C92FCEE0821C0201E2E9A8
+2024-06-04 15:58:47.360317 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 5638D962A8BE660C7DCF638E10B68314A77C6E5F26088E5240BE0CBA0BC23DDB
+2024-06-04 15:58:47.360335 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B
+2024-06-04 15:58:47.360354 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: B70EF074BB52A5885F06484291B920AE5419294DFFFFFFFFFFFFFFFFFFFFFFFF
+2024-06-04 15:58:47.360363 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Database is populated. Starting monitor loop. sequence = 939
+2024-06-04 15:58:47.364181 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 5
+2024-06-04 15:58:47.368095 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 4
+2024-06-04 15:58:47.379555 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 3
+2024-06-04 15:58:47.381827 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 2
+2024-06-04 15:58:47.384290 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 1
+2024-06-04 15:58:47.385565 (util/log/Logger.hpp:227) [0x0000000174a17000] ETL:NFO Finished loading cache. Cache size = 18. Took 0 seconds
+2024-06-04 15:59:48.496956 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Default log level = NFO
+2024-06-04 15:59:48.498957 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Clio version: clio-20240527134141-project-DEFI-129-branch-87ac1a6
+2024-06-04 15:59:48.498984 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Number of io threads = 2
+2024-06-04 15:59:48.559059 (util/log/Logger.hpp:227) [0x00000001ffa60c00] Subscriptions:NFO Starting subscription manager with 1 workers
+2024-06-04 15:59:48.569061 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Added etl source - {validated range: N/A, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 15:59:48.569131 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Starting reporting etl
+2024-06-04 15:59:48.570410 (util/log/Logger.hpp:236) [0x0000000174aa3000] ETL:WRN start sequence specified but db is already populated
+2024-06-04 15:59:48.570440 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Database already populated. Picking up from the tip of history
+2024-06-04 15:59:48.570452 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache with cursor from num_diffs=32
+2024-06-04 15:59:48.575639 (util/log/Logger.hpp:227) [0x00000001751bf000] GrpcSource[127.0.0.1:6006]:NFO Received a message on ledger subscription stream. Message : {"result":{"fee_base":10,"ledger_hash":"9C94AE70C7464E908B9230E4CA8D5F51FDDD9F2DE8D3CF379E76997A0FD00175","ledger_index":938,"ledger_time":770837270,"reserve_base":10000000,"reserve_inc":2000000,"validated_ledgers":"2-938"},"status":"success","type":"response"}
+2024-06-04 15:59:48.650213 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache. Num cursors = 6
+2024-06-04 15:59:48.650307 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 15D85ED6AF6E66CEB3E5D27ECD0497AE7A01947C9F77F4397A29C1302D036B64
+2024-06-04 15:59:48.650295 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 0000000000000000000000000000000000000000000000000000000000000000
+2024-06-04 15:59:48.650359 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 5638D962A8BE660C7DCF638E10B68314A77C6E5F26088E5240BE0CBA0BC23DDB
+2024-06-04 15:59:48.650377 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B
+2024-06-04 15:59:48.650351 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 2B6AC232AA4C4BE41BF49D2459FA4A0347E1B543A4C92FCEE0821C0201E2E9A8
+2024-06-04 15:59:48.650396 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: B70EF074BB52A5885F06484291B920AE5419294DFFFFFFFFFFFFFFFFFFFFFFFF
+2024-06-04 15:59:48.650390 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Database is populated. Starting monitor loop. sequence = 939
+2024-06-04 15:59:48.654488 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 5
+2024-06-04 15:59:48.658269 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 4
+2024-06-04 15:59:48.669693 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 3
+2024-06-04 15:59:48.673148 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 2
+2024-06-04 15:59:48.674511 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 1
+2024-06-04 15:59:48.675772 (util/log/Logger.hpp:227) [0x0000000174a17000] ETL:NFO Finished loading cache. Cache size = 18. Took 0 seconds
+2024-06-04 16:03:12.510385 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Default log level = NFO
+2024-06-04 16:03:12.512017 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Clio version: clio-20240527134141-project-DEFI-129-branch-87ac1a6
+2024-06-04 16:03:12.512044 (util/log/Logger.hpp:310) [0x00000001ffa60c00] General:NFO Number of io threads = 2
+2024-06-04 16:03:12.574850 (util/log/Logger.hpp:227) [0x00000001ffa60c00] Subscriptions:NFO Starting subscription manager with 1 workers
+2024-06-04 16:03:12.583746 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Added etl source - {validated range: N/A, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 16:03:12.583827 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Starting reporting etl
+2024-06-04 16:03:12.585137 (util/log/Logger.hpp:236) [0x0000000174aa3000] ETL:WRN start sequence specified but db is already populated
+2024-06-04 16:03:12.585179 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Database already populated. Picking up from the tip of history
+2024-06-04 16:03:12.585192 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache with cursor from num_diffs=32
+2024-06-04 16:03:12.590055 (util/log/Logger.hpp:227) [0x00000001751bf000] GrpcSource[127.0.0.1:6006]:NFO Received a message on ledger subscription stream. Message : {"result":{"fee_base":10,"ledger_hash":"9C94AE70C7464E908B9230E4CA8D5F51FDDD9F2DE8D3CF379E76997A0FD00175","ledger_index":938,"ledger_time":770837270,"reserve_base":10000000,"reserve_inc":2000000,"validated_ledgers":"2-938"},"status":"success","type":"response"}
+2024-06-04 16:03:12.665125 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Loading cache. Num cursors = 6
+2024-06-04 16:03:12.665208 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 15D85ED6AF6E66CEB3E5D27ECD0497AE7A01947C9F77F4397A29C1302D036B64
+2024-06-04 16:03:12.665201 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: 0000000000000000000000000000000000000000000000000000000000000000
+2024-06-04 16:03:12.665240 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 2B6AC232AA4C4BE41BF49D2459FA4A0347E1B543A4C92FCEE0821C0201E2E9A8
+2024-06-04 16:03:12.665265 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: 5638D962A8BE660C7DCF638E10B68314A77C6E5F26088E5240BE0CBA0BC23DDB
+2024-06-04 16:03:12.665288 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Starting a cursor: B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B
+2024-06-04 16:03:12.665293 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Starting a cursor: B70EF074BB52A5885F06484291B920AE5419294DFFFFFFFFFFFFFFFFFFFFFFFF
+2024-06-04 16:03:12.665314 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Database is populated. Starting monitor loop. sequence = 939
+2024-06-04 16:03:12.669248 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 5
+2024-06-04 16:03:12.672962 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 4
+2024-06-04 16:03:12.684480 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 3
+2024-06-04 16:03:12.686810 (util/log/Logger.hpp:218) [0x0000000174a17000] ETL:DBG Finished a cursor. Remaining = 2
+2024-06-04 16:03:12.689253 (util/log/Logger.hpp:218) [0x000000017498b000] ETL:DBG Finished a cursor. Remaining = 1
+2024-06-04 16:03:12.690500 (util/log/Logger.hpp:227) [0x0000000174a17000] ETL:NFO Finished loading cache. Cache size = 18. Took 0 seconds
+2024-06-04 16:05:19.322118 (util/log/Logger.hpp:227) [0x00000001ffa60c00] GrpcSource[127.0.0.1:6006]:NFO Received a message on ledger subscription stream. Message : {"fee_base":10,"ledger_hash":"9A4E13F6B6DA448C4209AB485B849DFD8786D1FBC082A3C138454A17E6498AAE","ledger_index":939,"ledger_time":770846720,"reserve_base":10000000,"reserve_inc":2000000,"txn_count":1,"type":"ledgerClosed","validated_ledgers":"2-939"}
+2024-06-04 16:05:19.322325 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Ledger with sequence = 939 has been validated by the network. Attempting to find in database and publish
+2024-06-04 16:05:19.322352 (util/log/Logger.hpp:227) [0x0000000174aa3000] ETL:NFO Attempting to publish ledger = 939
+2024-06-04 16:05:19.323632 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Trying to publish. Could not find ledger with sequence = 939
+2024-06-04 16:05:20.327228 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Trying to publish. Could not find ledger with sequence = 939
+2024-06-04 16:05:21.332013 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Trying to publish. Could not find ledger with sequence = 939
+2024-06-04 16:05:22.338518 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Trying to publish. Could not find ledger with sequence = 939
+2024-06-04 16:05:23.345152 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Trying to publish. Could not find ledger with sequence = 939
+2024-06-04 16:05:24.348864 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Trying to publish. Could not find ledger with sequence = 939
+2024-06-04 16:05:25.355980 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Trying to publish. Could not find ledger with sequence = 939
+2024-06-04 16:05:26.362705 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Trying to publish. Could not find ledger with sequence = 939
+2024-06-04 16:05:27.367088 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Trying to publish. Could not find ledger with sequence = 939
+2024-06-04 16:05:28.373736 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Trying to publish. Could not find ledger with sequence = 939
+2024-06-04 16:05:28.373811 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Failed to publish ledger after 10 attempts.
+2024-06-04 16:05:28.373833 (util/log/Logger.hpp:236) [0x0000000174aa3000] ETL:WRN Failed to publish ledger with sequence = 939 . Beginning ETL
+2024-06-04 16:05:28.373849 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Wait for cache containing seq 938 current cache last seq =938
+2024-06-04 16:05:28.373860 (util/log/Logger.hpp:218) [0x0000000174aa3000] ETL:DBG Starting etl pipeline
+2024-06-04 16:05:28.375191 (util/log/Logger.hpp:218) [0x0000000175363000] ETL:DBG Attempting to fetch ledger with sequence = 939
+2024-06-04 16:05:28.375251 (util/log/Logger.hpp:218) [0x0000000175363000] ETL:DBG Attempting to execute func. ledger sequence = 939 - source = {validated range: 2-939, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 16:05:28.375269 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Grabbing extraction queue for 939; start was 939
+2024-06-04 16:05:28.378144 (util/log/Logger.hpp:227) [0x0000000175363000] ETL:NFO Successfully fetched ledger = 939 from source = {validated range: 2-939, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 16:05:28.378189 (util/log/Logger.hpp:218) [0x0000000175363000] ETL:DBG Successfully executed func at source = {validated range: 2-939, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051} - ledger sequence = 939
+2024-06-04 16:05:28.378203 (util/log/Logger.hpp:227) [0x0000000175363000] ETL:NFO Extract phase time = 0.003025; Extract phase tps = 330.579; Avg extract time = 0.003025; seq = 939
+2024-06-04 16:05:28.378240 (util/log/Logger.hpp:218) [0x0000000175363000] ETL:DBG Grabbing extraction queue for 939; start was 939
+2024-06-04 16:05:28.378259 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Beginning ledger update
+2024-06-04 16:05:28.378283 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Deserialized ledger header. LedgerHeader {Sequence: 939, Hash: 9A4E13F6B6DA448C4209AB485B849DFD8786D1FBC082A3C138454A17E6498AAE, TxHash: 7272EDB0292A809D6391C0F8E517864E27CD1EC0E8B97236F49923A824D74CC5, AccountHash: 26F8E097F77300B860953F8D65202162BC0072620DFE804FA3CA2F531C5D1CA5, ParentHash: 9C94AE70C7464E908B9230E4CA8D5F51FDDD9F2DE8D3CF379E76997A0FD00175}
+2024-06-04 16:05:28.378336 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG key = 5638D962A8BE660C7DCF638E10B68314A77C6E5F26088E5240BE0CBA0BC23DDB - mod type = 2
+2024-06-04 16:05:28.378366 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG key = B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B - mod type = 2
+2024-06-04 16:05:28.378393 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG key = B70EF074BB52A5885F06484291B920AE5419294DFFFFFFFFFFFFFFFFFFFFFFFF - mod type = 2
+2024-06-04 16:05:28.378420 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG object neighbors not included. using cache
+2024-06-04 16:05:28.378442 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Inserted/modified/deleted all objects. Number of objects = 3
+2024-06-04 16:05:28.378605 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Inserted all transactions. Number of transactions  = 1
+2024-06-04 16:05:28.382181 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Finished writes. Total time: 0.003549
+2024-06-04 16:05:28.382215 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Finished ledger update: LedgerHeader {Sequence: 939, Hash: 9A4E13F6B6DA448C4209AB485B849DFD8786D1FBC082A3C138454A17E6498AAE, TxHash: 7272EDB0292A809D6391C0F8E517864E27CD1EC0E8B97236F49923A824D74CC5, AccountHash: 26F8E097F77300B860953F8D65202162BC0072620DFE804FA3CA2F531C5D1CA5, ParentHash: 9C94AE70C7464E908B9230E4CA8D5F51FDDD9F2DE8D3CF379E76997A0FD00175}
+2024-06-04 16:05:28.382231 (util/log/Logger.hpp:227) [0x00000001757c3000] ETL:NFO Load phase of ETL. Successfully wrote ledger! Ledger info: LedgerHeader {Sequence: 939, Hash: 9A4E13F6B6DA448C4209AB485B849DFD8786D1FBC082A3C138454A17E6498AAE, TxHash: 7272EDB0292A809D6391C0F8E517864E27CD1EC0E8B97236F49923A824D74CC5, AccountHash: 26F8E097F77300B860953F8D65202162BC0072620DFE804FA3CA2F531C5D1CA5, ParentHash: 9C94AE70C7464E908B9230E4CA8D5F51FDDD9F2DE8D3CF379E76997A0FD00175}. txn count = 1. object count = 3. load time = 3.973e-06. load txns per second = 251699. load objs per second = 755097
+2024-06-04 16:05:28.382262 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Grabbing extraction queue for 940; start was 939
+2024-06-04 16:05:28.382259 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Publishing ledger 939
+2024-06-04 16:05:28.385171 (util/log/Logger.hpp:227) [0x00000001ffa60c00] ETL:NFO Published ledger 939
+2024-06-04 16:05:31.041699 (util/log/Logger.hpp:227) [0x00000001751bf000] GrpcSource[127.0.0.1:6006]:NFO Received a message on ledger subscription stream. Message : {"fee_base":10,"ledger_hash":"C1746FE0990AE4BC451E2B6BC723FB7F3D1CDBCB90256107ADB74C5F45621EE2","ledger_index":940,"ledger_time":770846730,"reserve_base":10000000,"reserve_inc":2000000,"txn_count":1,"type":"ledgerClosed","validated_ledgers":"2-940"}
+2024-06-04 16:05:31.041795 (util/log/Logger.hpp:218) [0x00000001753ef000] ETL:DBG Attempting to fetch ledger with sequence = 940
+2024-06-04 16:05:31.041842 (util/log/Logger.hpp:218) [0x00000001753ef000] ETL:DBG Attempting to execute func. ledger sequence = 940 - source = {validated range: 2-940, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 16:05:31.042307 (util/log/Logger.hpp:227) [0x00000001753ef000] ETL:NFO Successfully fetched ledger = 940 from source = {validated range: 2-940, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 16:05:31.042352 (util/log/Logger.hpp:218) [0x00000001753ef000] ETL:DBG Successfully executed func at source = {validated range: 2-940, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051} - ledger sequence = 940
+2024-06-04 16:05:31.042367 (util/log/Logger.hpp:227) [0x00000001753ef000] ETL:NFO Extract phase time = 0.00058; Extract phase tps = 1724.14; Avg extract time = 0.00058; seq = 940
+2024-06-04 16:05:31.042379 (util/log/Logger.hpp:218) [0x00000001753ef000] ETL:DBG Grabbing extraction queue for 940; start was 939
+2024-06-04 16:05:31.042398 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Beginning ledger update
+2024-06-04 16:05:31.042425 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Deserialized ledger header. LedgerHeader {Sequence: 940, Hash: C1746FE0990AE4BC451E2B6BC723FB7F3D1CDBCB90256107ADB74C5F45621EE2, TxHash: 57EF5E90C1669BB6EF451325519693CA0A01B654192C755182B4032070636EE1, AccountHash: 92472028ADF28B1839FC1FC759B523486AAD243C6F31C908D58BFA90732FEA79, ParentHash: 9A4E13F6B6DA448C4209AB485B849DFD8786D1FBC082A3C138454A17E6498AAE}
+2024-06-04 16:05:31.042468 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG key = 5638D962A8BE660C7DCF638E10B68314A77C6E5F26088E5240BE0CBA0BC23DDB - mod type = 2
+2024-06-04 16:05:31.042497 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG key = B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B - mod type = 2
+2024-06-04 16:05:31.042518 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG key = B70EF074BB52A5885F06484291B920AE5419294DFFFFFFFFFFFFFFFFFFFFFFFF - mod type = 2
+2024-06-04 16:05:31.042541 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG object neighbors not included. using cache
+2024-06-04 16:05:31.042551 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Inserted/modified/deleted all objects. Number of objects = 3
+2024-06-04 16:05:31.042605 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Inserted all transactions. Number of transactions  = 1
+2024-06-04 16:05:31.045845 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Finished writes. Total time: 0.003218
+2024-06-04 16:05:31.045872 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Finished ledger update: LedgerHeader {Sequence: 940, Hash: C1746FE0990AE4BC451E2B6BC723FB7F3D1CDBCB90256107ADB74C5F45621EE2, TxHash: 57EF5E90C1669BB6EF451325519693CA0A01B654192C755182B4032070636EE1, AccountHash: 92472028ADF28B1839FC1FC759B523486AAD243C6F31C908D58BFA90732FEA79, ParentHash: 9A4E13F6B6DA448C4209AB485B849DFD8786D1FBC082A3C138454A17E6498AAE}
+2024-06-04 16:05:31.045888 (util/log/Logger.hpp:227) [0x00000001757c3000] ETL:NFO Load phase of ETL. Successfully wrote ledger! Ledger info: LedgerHeader {Sequence: 940, Hash: C1746FE0990AE4BC451E2B6BC723FB7F3D1CDBCB90256107ADB74C5F45621EE2, TxHash: 57EF5E90C1669BB6EF451325519693CA0A01B654192C755182B4032070636EE1, AccountHash: 92472028ADF28B1839FC1FC759B523486AAD243C6F31C908D58BFA90732FEA79, ParentHash: 9A4E13F6B6DA448C4209AB485B849DFD8786D1FBC082A3C138454A17E6498AAE}. txn count = 1. object count = 3. load time = 3.492e-06. load txns per second = 286369. load objs per second = 859107
+2024-06-04 16:05:31.045910 (util/log/Logger.hpp:227) [0x00000001751bf000] ETL:NFO Publishing ledger 940
+2024-06-04 16:05:31.045908 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Grabbing extraction queue for 941; start was 939
+2024-06-04 16:05:31.048757 (util/log/Logger.hpp:227) [0x00000001751bf000] ETL:NFO Published ledger 940
+2024-06-04 16:48:50.650681 (util/log/Logger.hpp:227) [0x00000001ffa60c00] GrpcSource[127.0.0.1:6006]:NFO Received a message on ledger subscription stream. Message : {"fee_base":10,"ledger_hash":"F4B032F5BC33E9E9D9F566DC94AFAEF724FACC7E87B0793EF5FB8D0ADDAAB7D7","ledger_index":941,"ledger_time":770849330,"reserve_base":10000000,"reserve_inc":2000000,"txn_count":1,"type":"ledgerClosed","validated_ledgers":"2-941"}
+2024-06-04 16:48:50.650954 (util/log/Logger.hpp:218) [0x000000017547b000] ETL:DBG Attempting to fetch ledger with sequence = 941
+2024-06-04 16:48:50.651001 (util/log/Logger.hpp:218) [0x000000017547b000] ETL:DBG Attempting to execute func. ledger sequence = 941 - source = {validated range: 2-941, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 16:48:50.651629 (util/log/Logger.hpp:227) [0x000000017547b000] ETL:NFO Successfully fetched ledger = 941 from source = {validated range: 2-941, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 16:48:50.651653 (util/log/Logger.hpp:218) [0x000000017547b000] ETL:DBG Successfully executed func at source = {validated range: 2-941, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051} - ledger sequence = 941
+2024-06-04 16:48:50.651665 (util/log/Logger.hpp:227) [0x000000017547b000] ETL:NFO Extract phase time = 0.000717; Extract phase tps = 1394.7; Avg extract time = 0.000717; seq = 941
+2024-06-04 16:48:50.651680 (util/log/Logger.hpp:218) [0x000000017547b000] ETL:DBG Grabbing extraction queue for 941; start was 939
+2024-06-04 16:48:50.651696 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Beginning ledger update
+2024-06-04 16:48:50.651719 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Deserialized ledger header. LedgerHeader {Sequence: 941, Hash: F4B032F5BC33E9E9D9F566DC94AFAEF724FACC7E87B0793EF5FB8D0ADDAAB7D7, TxHash: 75AB05054E4DC5146080A8368749AED225A422D4803BD44769D2CB263904C685, AccountHash: D42746211BA73453828BFA9C12F352423FC5E147299A7B4954669A358E8BD13B, ParentHash: C1746FE0990AE4BC451E2B6BC723FB7F3D1CDBCB90256107ADB74C5F45621EE2}
+2024-06-04 16:48:50.651754 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG key = 0A623E44F49F86DAA01B24ECF29084C9F3680592519E1F82DE25AC30981CE53A - mod type = 1
+2024-06-04 16:48:50.651766 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG object neighbors not included. using cache
+2024-06-04 16:48:50.651786 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG key = 179CC0A41820EEB10205F8073AE29E97E090931842ADF74C67576FC35714AF51 - mod type = 1
+2024-06-04 16:48:50.651797 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG object neighbors not included. using cache
+2024-06-04 16:48:50.651835 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG key = 1EF31A8668E2FA710B00DD9D0AFB5D5273FEE74F6B2C38528B2634FE83F79731 - mod type = 1
+2024-06-04 16:48:50.651850 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG object neighbors not included. using cache
+2024-06-04 16:48:50.651860 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Is book dir. Key = 1EF31A8668E2FA710B00DD9D0AFB5D5273FEE74F6B2C38528B2634FE83F79731
+2024-06-04 16:48:50.651870 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Need to recalculate book base successor. base = 1EF31A8668E2FA710B00DD9D0AFB5D5273FEE74F6B2C38520000000000000000 - key = 1EF31A8668E2FA710B00DD9D0AFB5D5273FEE74F6B2C38528B2634FE83F79731 - isDeleted = false - seq = 941
+2024-06-04 16:48:50.651891 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG key = 5638D962A8BE660C7DCF638E10B68314A77C6E5F26088E5240BE0CBA0BC23DDB - mod type = 2
+2024-06-04 16:48:50.651908 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG key = B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B - mod type = 2
+2024-06-04 16:48:50.651922 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG object neighbors not included. using cache
+2024-06-04 16:48:50.651934 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG writing successor for new object 0000000000000000000000000000000000000000000000000000000000000000 - 0A623E44F49F86DAA01B24ECF29084C9F3680592519E1F82DE25AC30981CE53A - 15D85ED6AF6E66CEB3E5D27ECD0497AE7A01947C9F77F4397A29C1302D036B64
+2024-06-04 16:48:50.651950 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG writing successor for new object 15D85ED6AF6E66CEB3E5D27ECD0497AE7A01947C9F77F4397A29C1302D036B64 - 179CC0A41820EEB10205F8073AE29E97E090931842ADF74C67576FC35714AF51 - 1966CE0F6F6CB6FA73DD8CB9D9E3A0C49FB8F99FF7F512AB64BA6E64E4378450
+2024-06-04 16:48:50.651963 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG writing successor for new object 1966CE0F6F6CB6FA73DD8CB9D9E3A0C49FB8F99FF7F512AB64BA6E64E4378450 - 1EF31A8668E2FA710B00DD9D0AFB5D5273FEE74F6B2C38528B2634FE83F79731 - 2B6AC232AA4C4BE41BF49D2459FA4A0347E1B543A4C92FCEE0821C0201E2E9A8
+2024-06-04 16:48:50.651984 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Updating book successor 1EF31A8668E2FA710B00DD9D0AFB5D5273FEE74F6B2C38520000000000000000 - 1EF31A8668E2FA710B00DD9D0AFB5D5273FEE74F6B2C38528B2634FE83F79731
+2024-06-04 16:48:50.651992 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Inserted/modified/deleted all objects. Number of objects = 5
+2024-06-04 16:48:50.652039 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Inserted all transactions. Number of transactions  = 1
+2024-06-04 16:48:50.652669 (util/log/Logger.hpp:227) [0x00000001751bf000] GrpcSource[127.0.0.1:6006]:NFO Received a message on ledger subscription stream. Message : {"fee_base":10,"ledger_hash":"9E52E662E6D5C0E809E7D7D1871548265D06651D7B628678A1795DB4DB60B3E2","ledger_index":942,"ledger_time":770849331,"reserve_base":10000000,"reserve_inc":2000000,"txn_count":0,"type":"ledgerClosed","validated_ledgers":"2-942"}
+2024-06-04 16:48:50.652787 (util/log/Logger.hpp:218) [0x0000000175507000] ETL:DBG Attempting to fetch ledger with sequence = 942
+2024-06-04 16:48:50.652834 (util/log/Logger.hpp:218) [0x0000000175507000] ETL:DBG Attempting to execute func. ledger sequence = 942 - source = {validated range: 2-942, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 16:48:50.653209 (util/log/Logger.hpp:227) [0x0000000175507000] ETL:NFO Successfully fetched ledger = 942 from source = {validated range: 2-942, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 16:48:50.653247 (util/log/Logger.hpp:218) [0x0000000175507000] ETL:DBG Successfully executed func at source = {validated range: 2-942, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051} - ledger sequence = 942
+2024-06-04 16:48:50.653276 (util/log/Logger.hpp:227) [0x0000000175507000] ETL:NFO Extract phase time = 0.000494; Extract phase tps = 0; Avg extract time = 0.000494; seq = 942
+2024-06-04 16:48:50.653302 (util/log/Logger.hpp:218) [0x0000000175507000] ETL:DBG Grabbing extraction queue for 942; start was 939
+2024-06-04 16:48:50.655165 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Finished writes. Total time: 0.003103
+2024-06-04 16:48:50.655185 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Finished ledger update: LedgerHeader {Sequence: 941, Hash: F4B032F5BC33E9E9D9F566DC94AFAEF724FACC7E87B0793EF5FB8D0ADDAAB7D7, TxHash: 75AB05054E4DC5146080A8368749AED225A422D4803BD44769D2CB263904C685, AccountHash: D42746211BA73453828BFA9C12F352423FC5E147299A7B4954669A358E8BD13B, ParentHash: C1746FE0990AE4BC451E2B6BC723FB7F3D1CDBCB90256107ADB74C5F45621EE2}
+2024-06-04 16:48:50.655196 (util/log/Logger.hpp:227) [0x00000001757c3000] ETL:NFO Load phase of ETL. Successfully wrote ledger! Ledger info: LedgerHeader {Sequence: 941, Hash: F4B032F5BC33E9E9D9F566DC94AFAEF724FACC7E87B0793EF5FB8D0ADDAAB7D7, TxHash: 75AB05054E4DC5146080A8368749AED225A422D4803BD44769D2CB263904C685, AccountHash: D42746211BA73453828BFA9C12F352423FC5E147299A7B4954669A358E8BD13B, ParentHash: C1746FE0990AE4BC451E2B6BC723FB7F3D1CDBCB90256107ADB74C5F45621EE2}. txn count = 1. object count = 5. load time = 3.502e-06. load txns per second = 285551. load objs per second = 1.42776e+06
+2024-06-04 16:48:50.655216 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Grabbing extraction queue for 942; start was 939
+2024-06-04 16:48:50.655226 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Beginning ledger update
+2024-06-04 16:48:50.655220 (util/log/Logger.hpp:227) [0x00000001751bf000] ETL:NFO Publishing ledger 941
+2024-06-04 16:48:50.655236 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Deserialized ledger header. LedgerHeader {Sequence: 942, Hash: 9E52E662E6D5C0E809E7D7D1871548265D06651D7B628678A1795DB4DB60B3E2, TxHash: 0000000000000000000000000000000000000000000000000000000000000000, AccountHash: 65F9EDC8B9FCE263E82C1DADA373D6A06B74E0C8ED4D273F61EAFD82C22586AE, ParentHash: F4B032F5BC33E9E9D9F566DC94AFAEF724FACC7E87B0793EF5FB8D0ADDAAB7D7}
+2024-06-04 16:48:50.655260 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG key = B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B - mod type = 2
+2024-06-04 16:48:50.655286 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG object neighbors not included. using cache
+2024-06-04 16:48:50.655298 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Inserted/modified/deleted all objects. Number of objects = 1
+2024-06-04 16:48:50.655306 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Inserted all transactions. Number of transactions  = 0
+2024-06-04 16:48:50.655394 (util/log/Logger.hpp:227) [0x00000001ffa60c00] GrpcSource[127.0.0.1:6006]:NFO Received a message on ledger subscription stream. Message : {"fee_base":10,"ledger_hash":"4B6AC64B1F2D98D32AEB3D2EA98098838D3F402E4A592174BB32EEA32856CF75","ledger_index":943,"ledger_time":770849332,"reserve_base":10000000,"reserve_inc":2000000,"txn_count":0,"type":"ledgerClosed","validated_ledgers":"2-943"}
+2024-06-04 16:48:50.655540 (util/log/Logger.hpp:218) [0x0000000175593000] ETL:DBG Attempting to fetch ledger with sequence = 943
+2024-06-04 16:48:50.655567 (util/log/Logger.hpp:218) [0x0000000175593000] ETL:DBG Attempting to execute func. ledger sequence = 943 - source = {validated range: 2-943, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 16:48:50.655866 (util/log/Logger.hpp:227) [0x0000000175593000] ETL:NFO Successfully fetched ledger = 943 from source = {validated range: 2-943, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051}
+2024-06-04 16:48:50.655884 (util/log/Logger.hpp:218) [0x0000000175593000] ETL:DBG Successfully executed func at source = {validated range: 2-943, ip: 127.0.0.1, web socket port: 6006, grpc port: 50051} - ledger sequence = 943
+2024-06-04 16:48:50.655896 (util/log/Logger.hpp:227) [0x0000000175593000] ETL:NFO Extract phase time = 0.00036; Extract phase tps = 0; Avg extract time = 0.00036; seq = 943
+2024-06-04 16:48:50.655908 (util/log/Logger.hpp:218) [0x0000000175593000] ETL:DBG Grabbing extraction queue for 943; start was 939
+2024-06-04 16:48:50.657828 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Finished writes. Total time: 0.002512
+2024-06-04 16:48:50.657841 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Finished ledger update: LedgerHeader {Sequence: 942, Hash: 9E52E662E6D5C0E809E7D7D1871548265D06651D7B628678A1795DB4DB60B3E2, TxHash: 0000000000000000000000000000000000000000000000000000000000000000, AccountHash: 65F9EDC8B9FCE263E82C1DADA373D6A06B74E0C8ED4D273F61EAFD82C22586AE, ParentHash: F4B032F5BC33E9E9D9F566DC94AFAEF724FACC7E87B0793EF5FB8D0ADDAAB7D7}
+2024-06-04 16:48:50.657850 (util/log/Logger.hpp:227) [0x00000001757c3000] ETL:NFO Load phase of ETL. Successfully wrote ledger! Ledger info: LedgerHeader {Sequence: 942, Hash: 9E52E662E6D5C0E809E7D7D1871548265D06651D7B628678A1795DB4DB60B3E2, TxHash: 0000000000000000000000000000000000000000000000000000000000000000, AccountHash: 65F9EDC8B9FCE263E82C1DADA373D6A06B74E0C8ED4D273F61EAFD82C22586AE, ParentHash: F4B032F5BC33E9E9D9F566DC94AFAEF724FACC7E87B0793EF5FB8D0ADDAAB7D7}. txn count = 0. object count = 1. load time = 2.623e-06. load txns per second = 0. load objs per second = 381243
+2024-06-04 16:48:50.657863 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Grabbing extraction queue for 943; start was 939
+2024-06-04 16:48:50.657871 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Beginning ledger update
+2024-06-04 16:48:50.657879 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Deserialized ledger header. LedgerHeader {Sequence: 943, Hash: 4B6AC64B1F2D98D32AEB3D2EA98098838D3F402E4A592174BB32EEA32856CF75, TxHash: 0000000000000000000000000000000000000000000000000000000000000000, AccountHash: 0C8F4E04CAEBFE95072F30F1BD0F7FE1B662333C26198C1FD7329279E63507F6, ParentHash: 9E52E662E6D5C0E809E7D7D1871548265D06651D7B628678A1795DB4DB60B3E2}
+2024-06-04 16:48:50.657904 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG key = B4979A36CDC7F3D3D5C31A4EAE2AC7D7209DDA877588B9AFC66799692AB0D66B - mod type = 2
+2024-06-04 16:48:50.657925 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG object neighbors not included. using cache
+2024-06-04 16:48:50.657938 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Inserted/modified/deleted all objects. Number of objects = 1
+2024-06-04 16:48:50.657946 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Inserted all transactions. Number of transactions  = 0
+2024-06-04 16:48:50.658072 (util/log/Logger.hpp:227) [0x00000001751bf000] ETL:NFO Published ledger 941
+2024-06-04 16:48:50.658090 (util/log/Logger.hpp:227) [0x00000001751bf000] ETL:NFO Publishing ledger 942
+2024-06-04 16:48:50.659378 (util/log/Logger.hpp:227) [0x00000001751bf000] ETL:NFO Published ledger 942
+2024-06-04 16:48:50.660388 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Finished writes. Total time: 0.002436
+2024-06-04 16:48:50.660406 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Finished ledger update: LedgerHeader {Sequence: 943, Hash: 4B6AC64B1F2D98D32AEB3D2EA98098838D3F402E4A592174BB32EEA32856CF75, TxHash: 0000000000000000000000000000000000000000000000000000000000000000, AccountHash: 0C8F4E04CAEBFE95072F30F1BD0F7FE1B662333C26198C1FD7329279E63507F6, ParentHash: 9E52E662E6D5C0E809E7D7D1871548265D06651D7B628678A1795DB4DB60B3E2}
+2024-06-04 16:48:50.660418 (util/log/Logger.hpp:227) [0x00000001757c3000] ETL:NFO Load phase of ETL. Successfully wrote ledger! Ledger info: LedgerHeader {Sequence: 943, Hash: 4B6AC64B1F2D98D32AEB3D2EA98098838D3F402E4A592174BB32EEA32856CF75, TxHash: 0000000000000000000000000000000000000000000000000000000000000000, AccountHash: 0C8F4E04CAEBFE95072F30F1BD0F7FE1B662333C26198C1FD7329279E63507F6, ParentHash: 9E52E662E6D5C0E809E7D7D1871548265D06651D7B628678A1795DB4DB60B3E2}. txn count = 0. object count = 1. load time = 2.547e-06. load txns per second = 0. load objs per second = 392619
+2024-06-04 16:48:50.660433 (util/log/Logger.hpp:227) [0x00000001751bf000] ETL:NFO Publishing ledger 943
+2024-06-04 16:48:50.660431 (util/log/Logger.hpp:218) [0x00000001757c3000] ETL:DBG Grabbing extraction queue for 944; start was 939
+2024-06-04 16:48:50.661723 (util/log/Logger.hpp:227) [0x00000001751bf000] ETL:NFO Published ledger 943
+2024-06-04 16:49:43.821245 (util/log/Logger.hpp:218) [0x00000001ffa60c00] Performance:DBG [0] http session created
+2024-06-04 16:49:43.821849 (util/log/Logger.hpp:227) [0x00000001ffa60c00] WebServer:NFO [0] Received request from ip = 127.0.0.1 - posting to WorkQueue
+2024-06-04 16:49:43.821985 (util/log/Logger.hpp:218) [0x00000001ffa60c00] Performance:DBG [0] Adding to work queue
+2024-06-04 16:49:43.822149 (util/log/Logger.hpp:218) [0x0000000174b2f000] Performance:DBG [[0] 1] new Context created
+2024-06-04 16:49:43.822359 (util/log/Logger.hpp:218) [0x0000000174b2f000] Performance:DBG [[0] 1]  start executing rpc `ledger_entry`
+2024-06-04 16:49:50.656769 (util/log/Logger.hpp:245) [0x0000000174c47000] RPC:ERR [[0] 1] Caught exception: [Extract int64]: Invalid value type
+2024-06-04 16:49:50.658064 (util/log/Logger.hpp:218) [0x0000000174c47000] Performance:DBG [[0] 1] Encountered error: {"result":{"error":"internal","error_code":73,"error_message":"Internal error.","status":"error","type":"response","request":{"method":"ledger_entry","params":[{"index":"2EA2D274689BE157C126CBF16AA1F9C1992B1C7DA6D559BE71F1C5C18CDF4781","include_deleted":true}]}}}
+2024-06-04 16:49:50.658487 (util/log/Logger.hpp:218) [0x00000001ffa60c00] Performance:DBG [0] http session closed
+2024-06-04 16:50:04.660653 (util/log/Logger.hpp:218) [0x00000001751bf000] Performance:DBG [2] http session created
+2024-06-04 16:50:04.661082 (util/log/Logger.hpp:227) [0x00000001751bf000] WebServer:NFO [2] Received request from ip = 127.0.0.1 - posting to WorkQueue
+2024-06-04 16:50:04.661206 (util/log/Logger.hpp:218) [0x00000001751bf000] Performance:DBG [2] Adding to work queue
+2024-06-04 16:50:04.661357 (util/log/Logger.hpp:218) [0x0000000174cd3000] Performance:DBG [[2] 3] new Context created
+2024-06-04 16:50:04.661494 (util/log/Logger.hpp:218) [0x0000000174cd3000] Performance:DBG [[2] 3]  start executing rpc `ledger_entry`
+2024-06-04 16:50:06.797781 (util/log/Logger.hpp:245) [0x0000000174deb000] RPC:ERR [[2] 3] Caught exception: [Extract int64]: Invalid value type
+2024-06-04 16:50:06.797876 (util/log/Logger.hpp:218) [0x0000000174deb000] Performance:DBG [[2] 3] Encountered error: {"result":{"error":"internal","error_code":73,"error_message":"Internal error.","status":"error","type":"response","request":{"method":"ledger_entry","params":[{"index":"2EA2D274689BE157C126CBF16AA1F9C1992B1C7DA6D559BE71F1C5C18CDF4781","include_deleted":true}]}}}
+2024-06-04 16:50:06.798192 (util/log/Logger.hpp:218) [0x00000001751bf000] Performance:DBG [2] http session closed
+2024-06-04 16:50:34.093140 (util/log/Logger.hpp:218) [0x00000001ffa60c00] Performance:DBG [4] http session created
+2024-06-04 16:50:34.093613 (util/log/Logger.hpp:227) [0x00000001ffa60c00] WebServer:NFO [4] Received request from ip = 127.0.0.1 - posting to WorkQueue
+2024-06-04 16:50:34.093769 (util/log/Logger.hpp:218) [0x00000001ffa60c00] Performance:DBG [4] Adding to work queue
+2024-06-04 16:50:34.093915 (util/log/Logger.hpp:218) [0x0000000174e77000] Performance:DBG [[4] 5] new Context created
+2024-06-04 16:50:34.093975 (util/log/Logger.hpp:218) [0x0000000174e77000] Performance:DBG [[4] 5]  start executing rpc `ledger_entry`
+2024-06-04 16:50:41.628213 (util/log/Logger.hpp:245) [0x0000000174f8f000] RPC:ERR [[4] 5] Caught exception: [Extract int64]: Invalid value type
+2024-06-04 16:50:41.628308 (util/log/Logger.hpp:218) [0x0000000174f8f000] Performance:DBG [[4] 5] Encountered error: {"result":{"error":"internal","error_code":73,"error_message":"Internal error.","status":"error","type":"response","request":{"method":"ledger_entry","params":[{"index":"2EA2D274689BE157C126CBF16AA1F9C1992B1C7DA6D559BE71F1C5C18CDF4781","include_deleted":true}]}}}
+2024-06-04 16:50:41.628842 (util/log/Logger.hpp:218) [0x00000001ffa60c00] Performance:DBG [4] http session closed
+2024-06-04 16:50:49.473377 (util/log/Logger.hpp:218) [0x00000001751bf000] Performance:DBG [6] http session created
+2024-06-04 16:50:49.473729 (util/log/Logger.hpp:227) [0x00000001751bf000] WebServer:NFO [6] Received request from ip = 127.0.0.1 - posting to WorkQueue
+2024-06-04 16:50:49.473817 (util/log/Logger.hpp:218) [0x00000001751bf000] Performance:DBG [6] Adding to work queue
+2024-06-04 16:50:49.473912 (util/log/Logger.hpp:218) [0x000000017501b000] Performance:DBG [[6] 7] new Context created
+2024-06-04 16:50:49.473981 (util/log/Logger.hpp:218) [0x000000017501b000] Performance:DBG [[6] 7]  start executing rpc `ledger_entry`
